@@ -85,7 +85,6 @@ function VideoID() {
             <div key={item.id} className='shadow text-center'>
                 <iframe 
                 // src={SideAPIUrl}
-                // رابط الفيديو مهم جدا تفهميه، عندك مشاكل معاه
                 src={`https://www.youtube.com/embed/${item.id}`} 
                 width="100%" 
                 height="200"

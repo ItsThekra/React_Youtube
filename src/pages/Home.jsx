@@ -27,17 +27,9 @@ function Home() {
     }, []);
 
 
-    // const handelVideoID = ()=> {
-    //     useEffect(()=>{
-    //         navigate(`/videoid/${videos.id}`)
-    //     },[])
-        
-    // }
-
 return (
     <>
     <div className='grid grid-cols-1 gap-4 pt-5 justify-center align-center items-center text-center sm:grid-cols-3 mt-20'
-    // onClick={handelVideoID(videos.id)}
     >
 
         {/* Announcement */}

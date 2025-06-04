@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router'
 import Swal from 'sweetalert2';
 
 function Login() {
-   // لان المستخدم راح يتفاعل مع الانبت حق الاسم والرمز
     const [user, userSet] = useState({
     username: "",
     password: "",
