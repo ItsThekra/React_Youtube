@@ -28,9 +28,9 @@ const router = createBrowserRouter([{
     element: <Layout/>,
     children:
     [
-        {path: "/" , element: <Home />},
+        {path: "/home" , element: <Home />},
         {path: "/videoid/:id" , element: <VideoID />},
-        {path:"/login" , element: <Login/>},
+        {path:"/" , element: <Login/>},
         {path:"/register" , element: <Register/>},
     ]
 

@@ -12,6 +12,7 @@ function Login() {
 
   // useEffect:
   let navigate = useNavigate();
+
   // كيف اخذ البيانات من المستخدم ؟ 
  const handelChange = (e) =>{
     const l = userSet
@@ -36,26 +37,49 @@ function Login() {
         localStorage.setItem("user", user.username)
         localStorage.setItem("password", user.password)
         console.log("saved!", user.username, user.password);
-        navigate("/")
+        navigate("/home")
 
     }
 
   return (
     <>
-    <div className='flex flex-col gap-5 justify-center align-center items-center bg-blue-950 p-5 m-20 rounded text-white'> Pleace Login to use the website
-        <input type="text" placeholder='Enter username' className='border border-amber-50 rounded text-1xl p-2' 
-        onChange={handelChange}
-        value={user.username}
-        name='username'
-        />
-        <input type="text" placeholder='Enter password' className='border-2  border-amber-50 rounded text-1xl p-2'
-        value={user.password}
-        onChange={handelChange}
-        name='password'
-        />
-        <button className='bg-blue-400 text-white rounded items-center align-center cursor-pointer p-3'
-         onClick={handelLogin}
-        >Login</button>
+    <div className='min-h-screen flex items-center justify-center '>
+      <div className='bg-white text-black p-10 rounded-xl shadow-lg w-full max-w-md'>
+
+        
+        <h2 className='text-2xl font-bold text-center mb-6'>Login</h2>
+        <p className='text-center text-gray-500 mb-6'>Plaese login to use the website</p>
+
+        
+        <div className='flex flex-col gap-4'>
+
+          <input 
+            type="text" 
+            placeholder='Enter username' 
+            className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500' 
+            onChange={handelChange}
+            value={user.username}
+            name='username'
+          />
+
+          <input 
+            type="password" 
+            placeholder='Enter password' 
+            className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            value={user.password}
+            onChange={handelChange}
+            name='password'
+          />
+
+          <button 
+            className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2'
+            onClick={handelLogin}
+          >
+            Login
+          </button>
+
+        </div>
+      </div>
     </div>
     </>
   )

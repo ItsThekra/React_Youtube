@@ -36,9 +36,18 @@ function Home() {
 
 return (
     <>
-    <div className='grid grid-cols-1 gap-4 pt-5 justify-center align-center items-center text-center sm:grid-cols-3'
+    <div className='grid grid-cols-1 gap-4 pt-5 justify-center align-center items-center text-center sm:grid-cols-3 mt-20'
     // onClick={handelVideoID(videos.id)}
     >
+
+        {/* Announcement */}
+  {/* <div className="col-span-full flex justify-center items-center">
+    <img 
+      src="https://mail.google.com/mail/u/0?ui=2&ik=616fb8417f&attid=0.1&permmsgid=msg-a:r2533748484204523138&th=19738ac08ed4d6ad&view=fimg&fur=ip&permmsgid=msg-a:r2533748484204523138&sz=s0-l75-ft&attbid=ANGjdJ8jd6vGLBy2437UMdWpkNAjAiWwwiNea661y040BknD5Ec4A36wUfnpaiELFJZkQf4FeP-dkg-OlMeGpIVpihNiejlkxlAiWnpJu8DJvV2VaI0jhfebXVUdX1E&disp=emb&realattid=ii_19738ad5788872aaed1&zw" 
+      className="w-full max-w-4xl rounded-lg shadow-lg"
+    />
+  </div> */}
+
         {
       videos.map((video) => (
         <Link to={`/videoid/${video.id}`}>
@@ -50,7 +59,7 @@ return (
             allowFullScreen
           ></iframe>
 
-          <p className='mb-2'>{video.snippet.title}</p>
+          <p className='mb-2 p-5'>{video.snippet.title}</p>
         </div>
         </Link>
       ))
